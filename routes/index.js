@@ -77,12 +77,12 @@ router.get('/profile', async (req, res) => {
   }
 
   try {
-    // const user =  User.findOne({ username: username }).exec();
+    const user = await User.findOne({ username: username });
 
     const loggedinn = await isLoggedIn(req);
 
     // console.log(user);
-    res.render('profile', { loggedIn: loggedinn });
+    res.render('profile', { loggedIn: loggedinn ,assosciatedUser:user});
   } catch (error) {
     console.error('Error fetching user details:', error);
     res.status(500).send('Error fetching user details');
