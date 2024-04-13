@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect('mongodb+srv://vishakha:visshuu@cluster0.iztdsgv.mongodb.net/Project 0')
+mongoose.connect('mongodb+srv://vishakhakayal636:kayal@cluster0.lmgpt4g.mongodb.net/')
 
 const userSchema = mongoose.Schema({
   username : String,
